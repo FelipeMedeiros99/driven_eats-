@@ -4,35 +4,91 @@ body{
 }
 
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 92px;
-    width: 414px;
-    background-color: #CF2B2B;
-    color: #FFFFFF;
-    font-weight: 400;    
-}
-
-    header h1 {
-        margin-left: 21px;
-        font-size: 44px;
-
+    img{
+        width: 144px;
+        height: 87px;
+        border-radius: 5%;
     }
 
-    header p{
-        margin-left: 21px;
-        font-size: 18px;
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 92px;
+        width: 414px;
+        background-color: #CF2B2B;
+        color: #FFFFFF;
+        font-weight: 400;    
     }
 
-main h1{
-    color: #333333;
-    font-weight: 400;
-    font-size: 26px;
-    margin-top: 123px;   
-}
+        header h1 {
+            margin-left: 21px;
+            font-size: 44px;
+
+
+        }
+
+        header p{
+            margin-left: 21px;
+            font-size: 18px;
+        }
+
+    main h1{
+        color: #333333;
+        font-weight: 400;
+        font-size: 26px;
+        margin-top: 123px;
+        margin-left: 14px;
+
+    }
+        .opcoes{
+            display: flex;
+            flex-direction: row;
+            overflow: auto;
+            width: 414px;
+
+        }
+
+            .secao-pratos__caixa{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                word-wrap: break-word;
+                width: 172px;
+                height: 216px;
+                border-radius: 5%;
+                background-color: #FFFFFF;
+                margin-top: 17px;
+                padding-left: 14px;
+                padding-right: 14px;
+                padding-top: 18px;
+                padding-bottom: 14px;
+            }
+
+                .secao-pratos__caixa h2{
+                    color: #333333;
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-top: 8px;
+                }
+
+                .secao-pratos__caixa p{
+                    color: #A6A6A6;
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-top: 4px;
+                }
+
+                .secao-pratos__caixa span{
+                    color: #000000;
+                    font-weight: 400;
+                    margin-top: 4px;
+
+                }
+                
