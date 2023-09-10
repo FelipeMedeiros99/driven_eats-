@@ -1,7 +1,12 @@
-body{
+.janela-principal{
+    display: flex;
+    flex-direction: column;
     font-family: 'Righteous', cursive;
     position: relative;
+    background-color: #CBCBCB;
 }
+
+
 
 .margem-topo{
     margin-top: 123px;
@@ -28,6 +33,7 @@ body{
         background-color: #CF2B2B;
         color: #FFFFFF;
         font-weight: 400;    
+        box-shadow: 0px 3px 2.1px #00000040;
     }
 
         header h1 {
@@ -40,12 +46,16 @@ body{
             font-size: 18px;
         }
 
+    main{
+        margin-bottom: 92px;
+    }
+
     main h1{
         color: #333333;
         font-weight: 400;
         font-size: 26px;
         margin-left: 14px;
-        margin-top: 31px;
+        margin-top: 11px;
 
     }
         .opcoes{
@@ -53,6 +63,8 @@ body{
             flex-direction: row;
             overflow: auto;
             width: 100%;
+            margin-left: 19px;
+            height: 260px;
 
         }
 
@@ -71,6 +83,7 @@ body{
                 padding-right: 14px;
                 padding-top: 18px;
                 padding-bottom: 14px;
+                margin-right: 16px;
             }
 
                 .secao-pratos__caixa h2, .secao-sobremesas__caixa h2, .secao-bebidas__caixa h2{
@@ -94,3 +107,25 @@ body{
 
                 }
                 
+    footer{
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 856px;
+        height: 92px;
+        background-color: #FFFFFF;
+
+    }
+
+        footer button{
+            background-color: #CBCBCB;
+            height: 61px;
+            width: 364px;
+            font-size: 20px;
+            color: #FFFFFF;
+            border-radius: 50px;
+            border: none;
+        }
