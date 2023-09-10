@@ -35,3 +35,12 @@ function ativaBotao(){
     }
 
 }
+
+function fecharPedido(){
+    const botao = document.querySelector("button")
+    x = botao.classList.contains("ativado")
+    if (document.querySelector("button").classList.contains("ativado")){
+        document.querySelector("a").innerHTML = href="https://wa.me/5598987835523"
+    }
+}
+
