@@ -12,9 +12,26 @@ function selecionado(item, secao){
     const pratoSelecionado = document.querySelector(item)
     pratoSelecionado.classList.add("selecionados")
 
-    return pratoSelecionado
+    caixa.classList.add("ok")
+
+    ativaBotao()
+
+
 }
 
 function ativaBotao(){
+    const setorPratos = document.querySelector(".secao-pratos")
+    const setorBebidas = document.querySelector(".secao-bebidas")
+    const setorSobremesa = document.querySelector(".secao-sobremesas")
     
+    const pratoSelecionado = setorPratos.classList.contains('ok')
+    const bebidaSelecionada = setorBebidas.classList.contains('ok')
+    const sobremesaSelecionada = setorSobremesa.classList.contains('ok')
+
+    if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada){
+        const botao = document.querySelector("button")
+        botao.classList.add("ativado")
+        botao.innerHTML = "fechar pedido"
+    }
+
 }
