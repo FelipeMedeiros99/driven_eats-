@@ -1,3 +1,9 @@
+body{
+    width: 100%;
+    background-color: #32B72F;
+    background-color: #CBCBCB;
+}
+
 .janela-principal{
     display: flex;
     flex-direction: column;
