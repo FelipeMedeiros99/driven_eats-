@@ -41,4 +41,12 @@ function ativaBotao(){
 }
 
 
+function pedirDados(){
+    const nome = prompt("Insira seu nome")
+    const endereco = prompt('insira seu endereço')
+    return [nome, endereco]
+}
+
+
+
 

@@ -90,6 +90,7 @@ body{
                 padding-top: 18px;
                 padding-bottom: 14px;
                 margin-right: 16px;
+                position: relative;
             }
 
                 .secao-pratos__caixa h2, .secao-sobremesas__caixa h2, .secao-bebidas__caixa h2{
@@ -110,6 +111,8 @@ body{
                     color: #000000;
                     font-weight: 400;
                     margin-top: 4px;
+                    position: absolute;
+                    bottom: 10px;
 
                 }
                 
