@@ -30,17 +30,15 @@ function ativaBotao(){
 
     if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada){
         const botao = document.querySelector("button")
+        document.querySelector("a").classList.add("link-on")
         botao.classList.add("ativado")
         botao.innerHTML = "fechar pedido"
+        
+        botao2 = document.querySelector(".botaoSecundario")
+        botao2.classList.add('desativar')
     }
 
 }
 
-function fecharPedido(){
-    const botao = document.querySelector("button")
-    x = botao.classList.contains("ativado")
-    if (document.querySelector("button").classList.contains("ativado")){
-        document.querySelector("a").innerHTML = href="https://wa.me/5598987835523"
-    }
-}
+
 

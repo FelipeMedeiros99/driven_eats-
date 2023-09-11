@@ -148,3 +148,19 @@ body{
 .ativado{
     background-color: #32B72F; 
 }
+
+a{
+    display: none;
+}
+
+.link-on{
+    display: block;
+}
+
+.botaoSecundario{
+    z-index: 0;
+}
+
+.desativar{
+    display: none;
+}
