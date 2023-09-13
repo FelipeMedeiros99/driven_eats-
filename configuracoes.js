@@ -16,7 +16,8 @@ function selecionado(item, secao){
     const pratoSelecionado = document.querySelector(item)
     pratoSelecionado.classList.add("selecionados")
     caixa.classList.add("ok")
-    ativaBotao()
+    const linkZap = ativaBotao()
+
 }
 
 function gerenciaPedidos(secao){
@@ -32,9 +33,6 @@ function gerenciaPedidos(secao){
     }
     
 }
-
-
-
 
 
 function ativaBotao(){
@@ -61,15 +59,16 @@ function ativaBotao(){
         const precoBebida = parseFloat(preçoFinal(".secao-bebidas").replace(",", ".").replace("$", ""))
         const sobremesa = gerenciaPedidos(".secao-sobremesas")
         const precoSobremesa = parseFloat(preçoFinal(".secao-sobremesas").replace(",", ".").replace("$", ""))
-        const mensagem = `Olá, gostaria de fazer o pedido:
+        let mensagem = `Olá, gostaria de fazer o pedido:
         - Prato: ${prato}
         - Bebida: ${bebida}
         - Sobremesa: ${sobremesa}
         Total: R$ ${precoBebida+precoPrato+precoSobremesa}`
-
-        alert(mensagem)
-
-   
+        
+        mensagem = encodeURIComponent(mensagem)
+        //alert(mensagem)
+        const ancoragem = `<a class="link-on" href="https://api.whatsapp.com/send?phone=5598987835523&text=${mensagem}"><button class="ativado">fechar pedido</button></a>`
+        document.querySelector("footer").innerHTML = ancoragem   
     }
 
 
@@ -86,3 +85,4 @@ function preçoFinal(secao){
     }
     
 }
+
