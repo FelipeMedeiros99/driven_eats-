@@ -23,7 +23,7 @@ function selecionado(item, secao){
     span = caixa.querySelector("sapan")
 
     ativaBotao()
-
+    
 
 }
 

@@ -97,10 +97,11 @@ body{
                         margin-right: 14px;
                         margin-top: 18px;
                         box-sizing: border-box;
+                        background-color: #ffffff;
                 }
                     img{
                         max-width: 144px;
-                        max-height: 87px;*/
+                        max-height: 87px;
                         border-radius: 5%;
                         
                     }
