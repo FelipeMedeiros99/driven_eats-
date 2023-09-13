@@ -63,6 +63,7 @@ body{
         
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             overflow: auto;
             width: 100%;
             margin-left: 19px;
@@ -77,6 +78,7 @@ body{
                 background-color: #FFFFFF;
                 margin-right: 16px;
                 margin-top: 4px;
+                margin-left: 4px;
                 max-height: 216px;
                 max-width: 172px;
                 border-radius: 10px;
