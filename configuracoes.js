@@ -1,4 +1,8 @@
 function selecionado(item, secao){
+    /*
+    adiciona a classe "selecionado" a um ítem de determinada 
+    seção, removendo outro qualquer que esteja selecionado na mesma secao.
+    */
 
 
     // removendo pratos caso já possua um selecionado
@@ -11,8 +15,12 @@ function selecionado(item, secao){
     // selecionando o novo item
     const pratoSelecionado = document.querySelector(item)
     pratoSelecionado.classList.add("selecionados")
-
     caixa.classList.add("ok")
+
+    p = caixa.querySelector("p")
+    h2 = caixa.querySelector("h2")
+    imagem = caixa.querySelector("img")
+    span = caixa.querySelector("sapan")
 
     ativaBotao()
 
@@ -40,12 +48,6 @@ function ativaBotao(){
 
 }
 
-
-function pedirDados(){
-    const nome = prompt("Insira seu nome")
-    const endereco = prompt('insira seu endereço')
-    return [nome, endereco]
-}
 
 
 
