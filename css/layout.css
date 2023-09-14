@@ -176,6 +176,8 @@ a{
 
 .link-on{
     display: block;
+    text-decoration: none;
+
 }
 
 .botaoSecundario{
