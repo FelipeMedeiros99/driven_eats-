@@ -1,3 +1,5 @@
+let nome = null
+
 function selecionado(item, secao){
     /*
     adiciona a classe "selecionado" a um ítem de determinada 
@@ -51,25 +53,36 @@ function ativaBotao(){
         }
 
         const prato = gerenciaPedidos(".secao-pratos")
-        const precoPrato = parseFloat(preçoFinal(".secao-pratos").replace(",", ".").replace("$", ""))
+        const precoPrato = parseFloat(precoFinal(".secao-pratos").replace(",", ".").replace("$", ""))
         const bebida = gerenciaPedidos(".secao-bebidas")
-        const precoBebida = parseFloat(preçoFinal(".secao-bebidas").replace(",", ".").replace("$", ""))
+        const precoBebida = parseFloat(precoFinal(".secao-bebidas").replace(",", ".").replace("$", ""))
         const sobremesa = gerenciaPedidos(".secao-sobremesas")
-        const precoSobremesa = parseFloat(preçoFinal(".secao-sobremesas").replace(",", ".").replace("$", ""))
-        let soma = (precoBebida+precoPrato+precoSobremesa)
+        const precoSobremesa = parseFloat(precoFinal(".secao-sobremesas").replace(",", ".").replace("$", ""))        
         
+
+        if(nome === null){
+            nome = prompt("insira seu nome")
+            endereco = prompt("insira seu endereço")
+        }
+
+
         let mensagem = `Olá, gostaria de fazer o pedido:
         - Prato: ${prato}
         - Bebida: ${bebida}
         - Sobremesa: ${sobremesa}
-        Total: R$ ${((precoBebida+precoPrato+precoSobremesa).toFixed(2)+"").replace(".", ",")}`
+        Total: R$ ${((precoBebida+precoPrato+precoSobremesa).toFixed(2)+"").replace(".", ",")}
         
+        nome: ${nome}
+        endereço: ${endereco}`
+        
+
+        
+
         mensagem = encodeURIComponent(mensagem)
         //alert(mensagem)
-        const ancoragem = `<a target="_blank" class="link-on" href="https://api.whatsapp.com/send?phone=5598987835523&text=${mensagem}"><button class="ativado">fechar pedido</button></a>`
+        const ancoragem = `<a href="https://api.whatsapp.com/send?phone=5598987835523&text=${mensagem}" target="_blank" class="link-on"><button class="ativado">fechar pedido</button></a>`
         document.querySelector("footer").innerHTML = ancoragem   
     }
-
 
 }
 
@@ -87,7 +100,7 @@ function gerenciaPedidos(secao){
     
 }
 
-function preçoFinal(secao){
+function precoFinal(secao){
 
     const secaoItem = document.querySelector(secao)
     const caixaItemSelecionado = secaoItem.querySelector(".selecionados")
