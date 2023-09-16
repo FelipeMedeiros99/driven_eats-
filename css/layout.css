@@ -32,18 +32,35 @@ body{
         top: 0;
         z-index: 3;
         background-color: #50D074;
-        width: 377px;
-        height: 353px;
+        
         color: #FFFFFF;
         font-family: 'Righteous', cursive;
         font-family: 'Roboto', sans-serif;  
     }
 
 
-        .janela-secundaria-ativada div{
+        .janela-secundaria-ativada h2{
             display: flex;
+            font-weight: 700;
+            font-size: 22px;
+            margin-top: 21px;
         }
-        
+
+        .janela-secundaria-ativada .descricao-compras-janela-secundaria{
+            display: flex;
+            flex-direction: column;
+            margin-top: 28px;
+            width: 100%;
+        }
+
+
+        .janela-secundaria-ativada .descricao-compras-janela-secundaria div{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+
         .janela-secundaria-ativada .ok{
             color: #50D074;
             width: 333px;
@@ -57,11 +74,6 @@ body{
             background-color: #50D074;
         }
 
-        .janela-secundaria-ativada .h2{
-            font-weight: 700;
-            size: 22px;
-            margin-top: 21px;
-        }
 
 /*configurações do header*/    
 
