@@ -17,173 +17,204 @@
 
     <!--corpo principal-->
     <div class="janela-principal">
-        
         <header>
             <h1>DrivenEats</h1>
             <p>Sua comida em 6 minutos</p>
         </header>
 
         <main>
-
-            <div class="margem-topo"></div>
+        
             <!--seção para pratos-->
-
             <h1>Primeiro, seu prato</h1>
             
             <!-- caixa onde ficam apresentados os pratos-->
-            <div class="secao-pratos opcoes">
-                
+            <section class="secao-pratos secao-generica">                
                 <!--prato 1-->
-                <div class="secao-pratos__caixa prato1" onclick="selecionado('.prato1',  '.secao-pratos')">
+                <div class="caixa" onclick="selecionaCaixa('secao-pratos', this)">
                     <div class="caixa_img"><img src="arquivos/pratos/prato-1.jpg" alt="foto do prato"></div>
                     <h2>combo costela</h2>
                     <p>Ubatata frita, arroz e costela</p>
                     <p><span>$19,90</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
 
                 </div>
 
                 <!--prato 2-->
-                <div class="secao-pratos__caixa prato2" onclick="selecionado('.prato2', '.secao-pratos')">
+                <div class="caixa" onclick="selecionaCaixa('secao-pratos', this)">
                     <div class="caixa_img"><img src="arquivos/pratos/prato-2.jpg" alt="foto do prato"></div>
                     <h2>combo frango</h2>
                     <p>peito de frango grelhado, arroz e cebola dourada </p>
                     <p><span>$17,00</span></p>
-                    
+                    <ion-icon name="checkmark-outline"></ion-icon>
                    
                 </div>
 
                 <!--prato 3-->
                 
-                <div class="secao-pratos__caixa prato3" onclick="selecionado('.prato3', '.secao-pratos')">
+                <div class="caixa" onclick="selecionaCaixa('secao-pratos', this)">
                     <div class="caixa_img">
                         <img src="arquivos/pratos/prato-3.jpg" alt="foto do prato">
                     </div>
                     <h2>bife acebolado</h2>
                     <p>bife acebolado, arroz e feijão</p>
                     <p><span>$18,50</span></p>
-                
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
             
 
                 <!--prato 4-->
-                <div class="secao-pratos__caixa prato4" onclick="selecionado('.prato4', '.secao-pratos')">
+                <div class="caixa" onclick="selecionaCaixa('secao-pratos', this)">
                     <div class="caixa_img"><img src="arquivos/pratos/prato-4.jpg" alt="foto do prato"></div>
                     <h2>combo carne com batata</h2>
                     <p>carne grelhada com batata frita</p>
                     <p><span>$17,68</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--prato 5-->
-                <div class="secao-pratos__caixa prato5" onclick="selecionado('.prato5', '.secao-pratos')">
+                <div class="caixa" onclick="selecionaCaixa('secao-pratos', this)">
                     <div class="caixa_img"><img src="arquivos/pratos/prato-5.jpg" alt="foto do prato"></div>
                     <h2>carne com salada </h2>
                     <p>Carne assada, batata frita e salada</p>
                     <p><span>$14,99</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
-            </div>
+            </section>
 
             <!--seção para bebidas-->
             <h1>Agora, sua bebida</h1>
             
             <!-- caixa onde ficam apresentados os pratos-->
-            <div class="secao-bebidas opcoes">
+            <section class="secao-bebidas secao-generica">
 
                 <!--bebida 1-->
-                <div class="secao-bebidas__caixa bebida2" onclick="selecionado('.bebida2', '.secao-bebidas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-bebidas', this)">
                     <div class="caixa_img"><img src="arquivos/bebidas/bebida1.webp" alt="foto do prato"></div>
                     <h2>coca cola lata</h2>
-                    
+                    <p>refri geladinho</p>                    
                     <p><span>$6,50</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--bebida 3-->
-                <div class="secao-bebidas__caixa bebida3" onclick="selecionado('.bebida3', '.secao-bebidas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-bebidas', this)">
                     <div class="caixa_img"><img src="arquivos/bebidas/bebida3.jpeg" alt="foto do prato"></div>
                     <h2>guaraná lata</h2>
-                    
+                    <p>refri geladinho</p>
                     <p><span>$6,00</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--bebida 4-->
-                <div class="secao-bebidas__caixa bebida4" onclick="selecionado('.bebida4', '.secao-bebidas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-bebidas', this)">
                     <div class="caixa_img">
                         <img src="arquivos/bebidas/bebida4.webp" alt="foto do prato">
                     </div>
-
-                        <h2>fanta laranja</h2>
+                    <h2>fanta laranja</h2>
+                    <p>refri geladinho</p>
                     <p><span>$4,99</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
                 
 
                 <!--bebida 5-->
-                <div class="secao-bebidas__caixa bebida5" onclick="selecionado('.bebida5', '.secao-bebidas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-bebidas', this)">
                     <div class="caixa_img">
                         <img src="arquivos/bebidas/bebida5.jpeg" alt="foto do prato">
                     </div>
-
-                        <h2>Suco de fruta</h2>
-                    <p></p>
+                    <h2>Suco de fruta</h2>
+                    <p>Suquinho top</p>
                     <p><span>$8,00</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
 
-            </div>
+            </section>
 
 
             <!--seção para sobremesas-->
             <h1>Por fim, sua sobremesa</h1>
             
             <!-- caixa onde ficam apresentados os pratos-->
-            <div class="secao-sobremesas opcoes">
+            <section class="secao-sobremesas secao-generica">   
                 
                 <!--sobremesa 1-->
-                <div class="secao-sobremesas__caixa sobremesa1" onclick="selecionado('.sobremesa1', '.secao-sobremesas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-sobremesas', this)">
                     <div class="caixa_img"><img src="arquivos/sobremesas/sobremesa1.jpg" alt="foto do prato"></div>
                     <h2>Sobremesa de morango</h2>
                     <p>Bastante morango</p>
                     <p><span>$10,00</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--sobremesa 2-->
-                <div class="secao-sobremesas__caixa sobremesa2" onclick="selecionado('.sobremesa2', '.secao-sobremesas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-sobremesas', this)">
                     <div class="caixa_img"><img src="arquivos/sobremesas/sobremesa2.webp" alt="foto do prato"></div>
                     <h2>pudim</h2>
                     <p>Doce e saboroso</p>
                     <p><span>$14,99</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--sobremesa 3-->
-                <div class="secao-sobremesas__caixa sobremesa3" onclick="selecionado('.sobremesa3', '.secao-sobremesas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-sobremesas', this)">
                     <div class="caixa_img"><img src="arquivos/sobremesas/sobremesa3.webp" alt="foto do prato"></div>
                     <h2>Mousse de maracujá</h2>
                     <p>Acalmante e refrescante</p>
                     <p><span>$12,00</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
 
                 <!--sobremesa 4-->
-                <div class="secao-sobremesas__caixa sobremesa4" onclick="selecionado('.sobremesa4', '.secao-sobremesas')">
+                <div class="caixa" onclick="selecionaCaixa('secao-sobremesas', this)">
                     <div class="caixa_img"><img src="arquivos/sobremesas/sobremesa4.jpg" alt="foto do prato"></div>
                     <h2>Sorvete</h2>
-                    <p>4 bolas de sabores variádos</p>
+                    <p>4 bolas de sabores variados</p>
                     <p><span>$8,00</span></p>
+                    <ion-icon name="checkmark-outline"></ion-icon>
                 </div>
-
-            </div>
+            </section>
+        
+        
         </main>  
         
-        <footer>
-            <a href=""
-            target="_blank" onclick="fecharPedido()"><button>Selecione os 3 ítens para fechar o pedido</button>
-            </a>
-            
-
-            <button class="botaoSecundario" onclick="fecharPedido()">Selecione os 3 ítens para fechar o pedido</button>
+        <footer class="botao-ativado">
+            <button onclick="fecharPedido(this)">Selecione os 3 ítens para fechar o pedido</button>
         </footer>
-      
     </div>
 
-<script src="configuracoes.js"></script>
+    <div class="janela-secundaria-ativada">
+            <h2>Confirme seu pedido</h2>
+            <div>
+                <p>Nome prato</p>
+                <span>preço prato</span>
+            </div>
+            
+            <div>
+                <p>Nome prato</p>
+                <span>preço prato</span>
+            </div>
+
+            <div>
+                <p>Nome prato</p>
+                <span>preço prato</span>
+            </div>
+            
+            <div>
+                <p><strong>TOTAL</strong></p>
+                <span><strong>valor total</strong></span>
+            </div>
+
+            <button class="ok">Tudo certo, pode pedir!</button>
+            <button class="cancelar">Cancelar</button>
+        </div>
+        
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="configuracoes.js"></script>
 
 </body> 
 </html>

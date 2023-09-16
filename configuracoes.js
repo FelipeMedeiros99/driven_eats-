@@ -1,10 +1,87 @@
+let prato = null
+let precoPrato = null
+let bebida = null
+let precoBebida = null
+let sobremesa = null
+let precoSoboremesa = null
+let itensSelecionados = 0
+
+function selecionaCaixa(secao, caixa){
+    // essa função ativa o botão após um ítem de cada seção ser escolhido
+
+
+    //desmarcando ítem da secao que foi selecionado anteriormente
+    let caixaMarcada = document.querySelector(`.${secao} .caixa-selecionada`)
+    //se houver caixa marcada, desmarcar
+    if (caixaMarcada !== null){
+         caixaMarcada.classList.remove("caixa-selecionada")
+
+         let icon = caixaMarcada.querySelector('.icon-ativado')
+         icon.classList.remove('icon-ativado')
+         itensSelecionados = itensSelecionados - 1
+
+    }
+
+
+    //adicionando a classe no item selecionado
+    caixa.classList.add('caixa-selecionada')
+    let marcarIcon = caixa.querySelector('ion-icon')
+    marcarIcon.classList.add('icon-ativado')
+
+
+    //substituindo o nome do elemento e o preco
+    if (secao === "secao-pratos"){
+        prato = caixa.querySelector("h2").innerHTML
+        precoPrato = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        itensSelecionados = itensSelecionados + 1
+    } 
+
+    else if(secao === "secao-bebidas"){
+        bebida = caixa.querySelector("h2").innerHTML
+        precoBebida = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        itensSelecionados = itensSelecionados + 1
+    }
+
+    else if(secao === "secao-sobremesas"){
+        sobremesa = caixa.querySelector("h2").innerHTML
+        precosobremesa = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        itensSelecionados = itensSelecionados + 1    
+    }
+
+
+    // ativando o botão
+    if (itensSelecionados == 3){
+        let botao = document.querySelector('button')
+        botao.classList.add("botao-ativado")
+        botao.innerHTML = 'fechar pedido'
+    }
+
+}
+
+
+function fecharPedido(botao){
+    // essa funcao verifica se o botao está ativo e abre a nova janela
+    // caso o botao esteja
+    if(botao.classList.contains("botao-ativado")){
+        //ativando janela de revisão
+        let janelaSecundaria = document.querySelector('.janela-secundaria')
+        janelaSecundaria.classList.add('janela-secundaria-ativada')
+
+        //tornando a janela principal opaca
+        document.querySelector('.janela-principal').classList.add('janela-principal-desativada')
+    }
+
+}
+
+
+/*
 let nome = null
 
 function selecionado(item, secao){
     /*
     adiciona a classe "selecionado" a um ítem de determinada 
     seção, removendo outro qualquer que esteja selecionado na mesma secao.
-    */
+    
 
 
     //1 - removendo pratos selecionados na seção, caso existam
@@ -88,8 +165,8 @@ function ativaBotao(){
 
 function gerenciaPedidos(secao){
     
-    /*essa função localiza o nome do ítem pedido por seção e 
-    retorna o nome do prato*/
+    //essa função localiza o nome do ítem pedido por seção e 
+    //retorna o nome do prato
 
     const secaoItem = document.querySelector(secao)
     const caixaItemSelecionado = secaoItem.querySelector(".selecionados")
@@ -111,3 +188,4 @@ function precoFinal(secao){
     
 }
 
+*/
