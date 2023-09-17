@@ -1,6 +1,9 @@
 /*ajustes gerais*/
 
 body{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
     width: 100%;
     background-color: #32B72F;
     background-color: #CBCBCB;
@@ -25,17 +28,19 @@ body{
     }
 
     .janela-secundaria-ativada{
+
         display: flex;
         align-items: center;
         flex-direction: column;
         position: fixed;
-        top: 0;
+        top: 16%;
         z-index: 3;
         background-color: #50D074;
-        
         color: #FFFFFF;
         font-family: 'Righteous', cursive;
         font-family: 'Roboto', sans-serif;  
+        width: 377px;
+        height: 353px;
     }
 
 
@@ -46,32 +51,46 @@ body{
             margin-top: 21px;
         }
 
-        .janela-secundaria-ativada .descricao-compras-janela-secundaria{
+        .janela-secundaria-ativada .descricao-compras{
             display: flex;
             flex-direction: column;
             margin-top: 28px;
-            width: 100%;
+            width: 333px;
         }
 
 
-        .janela-secundaria-ativada .descricao-compras-janela-secundaria div{
+        .janela-secundaria-ativada .descricao-compras div{
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 100%;
+            margin-bottom: 13px;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .janela-secundaria-ativada .descricao-compras strong{
+            font-weight: 700;    
         }
 
         .janela-secundaria-ativada .ok{
             color: #50D074;
+            font-weight: 700;
+            font-size: 22px;
             width: 333px;
             height: 52px;
             border-radius: 50px;
             border: none;
+            margin-top: 11px;
         }
         .janela-secundaria-ativada .cancelar{
             border: none;
             color: #FFFFFF;
             background-color: #50D074;
+            font-weight: 700;
+            font-size: 20px;
+            width: 333px;
+            height: 52px;
         }
 
 
