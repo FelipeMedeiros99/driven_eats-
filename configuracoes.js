@@ -6,6 +6,12 @@ let sobremesa = null
 let precoSobremesa = null
 let itensSelecionados = 0
 
+
+function converterEmDinheiro(valor){
+    valor = parseFloat(valor.replace("$", "")).toFixed(2)
+    return valor
+}
+
 function selecionaCaixa(secao, caixa){
     // essa função ativa o botão após um ítem de cada seção ser escolhido
 
@@ -32,20 +38,21 @@ function selecionaCaixa(secao, caixa){
     //substituindo o nome do elemento e o preco
     if (secao === "secao-pratos"){
         prato = caixa.querySelector("h2").innerHTML
-        precoPrato = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        precoPrato = converterEmDinheiro(caixa.querySelector('span').innerHTML)
+
         itensSelecionados = itensSelecionados + 1
-        console.log(precoPrato)
     } 
 
     else if(secao === "secao-bebidas"){
         bebida = caixa.querySelector("h2").innerHTML
-        precoBebida = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        precoBebida = converterEmDinheiro(caixa.querySelector('span').innerHTML)
         itensSelecionados = itensSelecionados + 1
     }
 
     else if(secao === "secao-sobremesas"){
         sobremesa = caixa.querySelector("h2").innerHTML
-        precosobremesa = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
+        precoSobremesa = converterEmDinheiro(caixa.querySelector('span').innerHTML)
+        console.log(precoSobremesa)
         itensSelecionados = itensSelecionados + 1    
     }
 
@@ -77,17 +84,17 @@ function fecharPedido(botao){
                 <div class="descricao-compras">
                     <div>
                         <p>${prato}</p>
-                        <span>${precoPrato}</span>
+                        <span>${precoPrato.replace(".", ",")}R$</span>
                     </div>
                     
                     <div>
                         <p>${bebida}</p>
-                        <span>${precoBebida}</span>
+                        <span>${precoBebida.replace(".", ",")}R$</span>
                     </div>
 
                     <div>
                         <p>${sobremesa}</p>
-                        <span>${precoSobremesa}</span>
+                        <span>${precoSobremesa.replace(".", ",")}R$</span>
                     </div>
                     
                     <div>
@@ -96,14 +103,32 @@ function fecharPedido(botao){
                     </div>
                 </div>
                 
-                <button class="ok">Tudo certo, pode pedir!</button>
-                <button class="cancelar">Cancelar</button>
+                <button class="ok" onclick="finalizar()">Tudo certo, pode pedir!</button>
+                <button class="cancelar" onclick="cancelar()">Cancelar</button>
         </div>`
 
-        console.log(pedido)
     }
 
 }
+
+function finalizar(){
+    let nome = prompt("insira seu nome:")
+    let endereco = prompt("insira seu endereço")
+
+    let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+    - Prato: ${prato}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${(parseFloat(converterEmDinheiro(precoPrato)) + 
+                parseFloat(converterEmDinheiro(precoBebida)) + 
+                parseFloat(converterEmDinheiro(precoSobremesa))).toFixed(2).replace(".", ",")}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`)
+
+    window.open(`https://wa.me/5598987835523/?text=${mensagem}`)
+}
+
 
 
 /*
