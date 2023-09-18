@@ -130,6 +130,13 @@ function finalizar(){
 }
 
 
+function cancelar(){
+    janelaSecundaria = document.querySelector('.janela-secundaria')
+    janelaPrincipal = document.querySelector('.janela-principal')
+    janelaSecundaria.classList.remove("janela-secundaria-ativada")
+    janelaPrincipal.classList.remove('janela-principal-desativada')
+
+}
 
 /*
 let nome = null
