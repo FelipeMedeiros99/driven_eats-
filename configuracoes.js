@@ -3,7 +3,7 @@ let precoPrato = null
 let bebida = null
 let precoBebida = null
 let sobremesa = null
-let precoSoboremesa = null
+let precoSobremesa = null
 let itensSelecionados = 0
 
 function selecionaCaixa(secao, caixa){
@@ -34,6 +34,7 @@ function selecionaCaixa(secao, caixa){
         prato = caixa.querySelector("h2").innerHTML
         precoPrato = parseFloat(caixa.querySelector('span').innerHTML).toFixed(2)
         itensSelecionados = itensSelecionados + 1
+        console.log(precoPrato)
     } 
 
     else if(secao === "secao-bebidas"){
@@ -66,9 +67,40 @@ function fecharPedido(botao){
         //ativando janela de revisão
         let janelaSecundaria = document.querySelector('.janela-secundaria')
         janelaSecundaria.classList.add('janela-secundaria-ativada')
+        console.log(janelaSecundaria.innerHTML)
 
         //tornando a janela principal opaca
         document.querySelector('.janela-principal').classList.add('janela-principal-desativada')
+
+        janelaSecundaria.innerHTML = ` <div class="janela-secundaria janela-secundaria-ativada">
+         <h2>Confirme seu pedido</h2>
+                <div class="descricao-compras">
+                    <div>
+                        <p>${prato}</p>
+                        <span>${precoPrato}</span>
+                    </div>
+                    
+                    <div>
+                        <p>${bebida}</p>
+                        <span>${precoBebida}</span>
+                    </div>
+
+                    <div>
+                        <p>${sobremesa}</p>
+                        <span>${precoSobremesa}</span>
+                    </div>
+                    
+                    <div>
+                        <p><strong>TOTAL</strong></p>
+                        <span><strong>valor total</strong></span>
+                    </div>
+                </div>
+                
+                <button class="ok">Tudo certo, pode pedir!</button>
+                <button class="cancelar">Cancelar</button>
+        </div>`
+
+        console.log(pedido)
     }
 
 }
