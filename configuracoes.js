@@ -98,10 +98,10 @@ function fecharPedido(botao){
                     </div>
                     
                     <div>
-                        <p><strong>${(parseFloat(converterEmDinheiro(precoPrato)) + 
+                        <p><strong>TOTAL</strong></p>
+                        <span><strong>${(parseFloat(converterEmDinheiro(precoPrato)) + 
                 parseFloat(converterEmDinheiro(precoBebida)) + 
-                parseFloat(converterEmDinheiro(precoSobremesa))).toFixed(2).replace(".", ",")}</strong></p>
-                        <span><strong>valor total</strong></span>
+                parseFloat(converterEmDinheiro(precoSobremesa))).toFixed(2).replace(".", ",")}</strong></span>
                     </div>
                 </div>
                 
