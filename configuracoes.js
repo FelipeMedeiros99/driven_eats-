@@ -98,7 +98,9 @@ function fecharPedido(botao){
                     </div>
                     
                     <div>
-                        <p><strong>TOTAL</strong></p>
+                        <p><strong>${(parseFloat(converterEmDinheiro(precoPrato)) + 
+                parseFloat(converterEmDinheiro(precoBebida)) + 
+                parseFloat(converterEmDinheiro(precoSobremesa))).toFixed(2).replace(".", ",")}</strong></p>
                         <span><strong>valor total</strong></span>
                     </div>
                 </div>
